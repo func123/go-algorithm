@@ -38,9 +38,16 @@ func doSortTesting(sorter Sorter, s1 []int, t *testing.T) {
 //}
 
 // 自顶向下归并排序
-func TestDownMerge(t *testing.T) {
-	s1 := GetRandomArrays(100000)
-	sorter := new(DownMerge)
+//func TestDownMerge(t *testing.T) {
+//	s1 := GetRandomArrays(100000)
+//	sorter := new(DownMerge)
+//	doSortTesting(sorter, s1, t)
+//}
+
+// 自底向上归并排序
+func TestUpMerge(t *testing.T) {
+	s1 := GetRandomArrays(10)
+	sorter := new(UpMerge)
 	doSortTesting(sorter, s1, t)
 }
 
