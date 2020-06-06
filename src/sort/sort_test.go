@@ -13,7 +13,7 @@ func doSortTesting(sorter Sorter, s1 []int, t *testing.T) {
 	} else {
 		t.Logf("sort unsuccessfully,spend time(%v)", time.Since(start))
 	}
-	t.Log(s1)
+	//t.Log(s1)
 }
 
 // 选择排序
@@ -31,22 +31,22 @@ func doSortTesting(sorter Sorter, s1 []int, t *testing.T) {
 //}
 
 // 希尔排序
-//func TestShell(t *testing.T) {
-//	s1 := GetRandomArrays(100000)
-//	sorter := new(Shell)
-//	doSortTesting(sorter, s1, t)
-//}
+func TestShell(t *testing.T) {
+	s1 := GetRandomArrays(1000001)
+	sorter := new(Shell)
+	doSortTesting(sorter, s1, t)
+}
 
 // 自顶向下归并排序
-//func TestDownMerge(t *testing.T) {
-//	s1 := GetRandomArrays(100000)
-//	sorter := new(DownMerge)
-//	doSortTesting(sorter, s1, t)
-//}
+func TestDownMerge(t *testing.T) {
+	s1 := GetRandomArrays(1000001)
+	sorter := new(DownMerge)
+	doSortTesting(sorter, s1, t)
+}
 
 // 自底向上归并排序
 func TestUpMerge(t *testing.T) {
-	s1 := GetRandomArrays(10)
+	s1 := GetRandomArrays(1000001)
 	sorter := new(UpMerge)
 	doSortTesting(sorter, s1, t)
 }

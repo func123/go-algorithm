@@ -28,7 +28,7 @@ func (s *DownMerge) doSort(s1, aux *[]int, lo, hi int) {
 // 辅助数组 在merge中充当原数组快照的作用，因此不关心之前的值，这里会在需要的区间【lo~hi】复制一份快照数据
 func (s *DownMerge) merge(s1, aux *[]int, lo, mid, hi int) {
 	// 设置2个数组的起点：
-	// A :  lo~mid
+	// A : lo~mid
 	// B : mid+1~hi
 	i, j := lo, mid+1
 	for k := lo; k <= hi; k++ {
